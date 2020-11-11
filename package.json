@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "parcel serve --port 8000 ./src/index.html ./src/init.plain.tsx ./src/init.shadow.tsx & ts-node-dev server.ts",
-    "start": "node server.js",
-    "build": "parcel build ./src/index.html ./src/init.plain.tsx ./src/init.shadow.tsx && tsc server.ts"
+    "dev": "NODE_ENV=development parcel serve --port 8000 ./src/index.html ./src/init.plain.tsx ./src/init.shadow.tsx & ts-node-dev server.ts",
+    "start": "NODE_ENV=production node server.js",
+    "build": "NODE_ENV=production parcel build ./src/index.html ./src/init.plain.tsx ./src/init.shadow.tsx && tsc server.ts"
   },
   "author": "",
   "license": "ISC",
