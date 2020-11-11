@@ -1,43 +1,41 @@
 {
-  "name": "micro-frontend-dashboard",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.5",
-    "@testing-library/react": "^11.1.1",
-    "@testing-library/user-event": "^12.2.0",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.19.3",
-    "@types/react": "^16.9.55",
+  "name": "composer",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "parcel serve --port 8000 ./src/index.html ./src/init.plain.tsx ./src/init.shadow.tsx & ts-node-dev server.ts",
+    "start": "node server.js",
+    "build": "parcel build ./src/index.html ./src/init.plain.tsx ./src/init.shadow.tsx && tsc server.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^14.14.6",
+    "@types/react": "^16.9.56",
     "@types/react-dom": "^16.9.9",
+    "@typescript-eslint/eslint-plugin": "^4.6.1",
+    "@typescript-eslint/parser": "^4.6.1",
+    "eslint": "^7.13.0",
+    "eslint-config-peerigon": "^28.1.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prefer-arrow": "^1.2.2",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "parcel": "^2.0.0-beta.1",
+    "sass": "^1.29.0",
+    "ts-node-dev": "^1.0.0",
+    "typescript": "^4.0.5"
+  },
+  "dependencies": {
+    "@chakra-ui/core": "^0.8.0",
+    "@emotion/core": "^10.1.1",
+    "@emotion/styled": "^10.0.27",
+    "@webcomponents/custom-elements": "^1.4.3",
+    "emotion-theming": "^10.0.27",
+    "fastify": "^3.7.0",
+    "fastify-static": "^3.3.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-scripts": "4.0.0",
-    "typescript": "^4.0.5",
-    "web-vitals": "^0.2.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "react-use": "^15.3.4"
   }
 }

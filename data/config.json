@@ -1,0 +1,15 @@
+{
+  "uis": [
+    {
+      "id": "@composer/plain",
+      "tag": "composer-plain",
+      "js": "http://localhost:3000/init.plain.js",
+      "css": "http://localhost:3000/init.plain.css"
+    },
+    {
+      "id": "@composer/shadow",
+      "tag": "composer-shadow",
+      "js": "http://localhost:3000/init.shadow.js"
+    }
+  ]
+}
