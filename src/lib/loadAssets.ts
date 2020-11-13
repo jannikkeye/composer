@@ -1,13 +1,13 @@
 const scriptIsLoaded = (src: string) => {
-  const scripts = document.querySelectorAll("script");
+  const scripts = Array.from(document.querySelectorAll("script"));
 
-  return [...scripts].find((script) => script.src === src);
+  return scripts.find((script) => script.src === src);
 };
 
 const stylesheetIsLoaded = (href: string) => {
-  const links = document.querySelectorAll("link");
+  const links = Array.from(document.querySelectorAll("link"));
 
-  return [...links].find((link) => link.href === href);
+  return links.find((link) => link.href === href);
 };
 
 /**
@@ -27,7 +27,7 @@ const loadScript = async (src: string) => {
       if (jsLoaded.getAttribute("data-loaded") === "true") {
         resolve();
       } else {
-        jsLoaded.addEventListener("load", resolve);
+        jsLoaded.addEventListener("load", () => resolve());
       }
     } else {
       const script = document.createElement("script");
@@ -67,7 +67,7 @@ const loadStylesheet = async (href: string) => {
       if (cssLoaded.getAttribute("data-loaded") === "true") {
         resolve();
       } else {
-        cssLoaded.addEventListener("load", resolve);
+        cssLoaded.addEventListener("load", () => resolve());
       }
     } else {
       const link = document.createElement("link");

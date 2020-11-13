@@ -10,11 +10,11 @@ const UiInfoContainer: FC<{
 }> = ({ id, tag, js, css, children }) => {
   return (
     <Box>
-      <Heading as="h2" mb="24px">
-        Element Info
+      <Heading as="h6" mb="24px" fontSize="18px">
+        {tag}
       </Heading>
       <Box>
-        <SimpleGrid columns={2}>
+        <SimpleGrid columns={2} spacing="20px">
           <Text className="title">
             <b>id: </b>
             {id}

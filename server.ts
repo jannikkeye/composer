@@ -14,7 +14,5 @@ app.ready().then(async () => {
   const host = process.env.HOST ?? "localhost";
   const port = process.env.PORT ?? 3000;
 
-  app.listen(port, host, (_err) => {
-    console.log(`Server listening on http://${host}:${port}`);
-  });
+  app.listen(port, host);
 });

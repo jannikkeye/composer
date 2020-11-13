@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import styles from "bundle-text:./styles/shadow.css";
-import { makeCustomElement } from "./lib/makeCustomElement";
+import { makeCustomElement } from "../../lib/makeCustomElement";
+import styles from "!!raw-loader!../../styles/shadow.css";
 
 const Shadow = makeCustomElement({
   mount: (el) => {
@@ -24,4 +24,4 @@ const Shadow = makeCustomElement({
   },
 });
 
-window.customElements.define("composer-shadow", Shadow);
+window.customElements.define("composer-shadow-react", Shadow);

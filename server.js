@@ -39,15 +39,19 @@ exports.__esModule = true;
 var path_1 = require("path");
 var fastify_1 = require("fastify");
 var fastify_static_1 = require("fastify-static");
-var app = fastify_1["default"]();
+var app = fastify_1["default"]({
+    logger: true
+});
 app.register(fastify_static_1["default"], {
-    root: path_1.resolve(__dirname, "dist/main")
+    root: path_1.resolve(__dirname, "./dist")
 });
 app.ready().then(function () { return __awaiter(void 0, void 0, void 0, function () {
-    return __generator(this, function (_a) {
-        app.listen(3000, "localhost", function (_err) {
-            console.log("Server listening on http://localhost:3000");
-        });
+    var host, port;
+    var _a, _b;
+    return __generator(this, function (_c) {
+        host = (_a = process.env.HOST) !== null && _a !== void 0 ? _a : "localhost";
+        port = (_b = process.env.PORT) !== null && _b !== void 0 ? _b : 3000;
+        app.listen(port, host);
         return [2 /*return*/];
     });
 }); });

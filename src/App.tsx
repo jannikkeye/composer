@@ -1,37 +1,18 @@
 import { Box, Divider, Flex, Heading, SimpleGrid } from "@chakra-ui/core";
 import React from "react";
+import { getUis } from "./lib/getUis";
 import EmbeddableUi from "./components/EmbeddableUi";
-import config from "../data/config.json";
 import InfoContainer from "./components/InfoContainer";
+import "./styles/plain.css";
 
 const App = () => {
-  const mappedUis = config.uis.map((ui) => {
-    if (process.env.NODE_ENV === "production") {
-      return {
-        ...ui,
-        js: ui.js
-          .replace("http:", window.location.protocol)
-          .replace("localhost", window.location.hostname)
-          .replace(":3000", ""),
-        css: ui.css
-          ? ui.css
-              .replace("http:", window.location.protocol)
-              .replace("localhost", window.location.hostname)
-              .replace(":3000", "")
-          : ui.css,
-      };
-    }
-
-    return ui;
-  });
-
   return (
-    <Flex h="100vh" alignItems="center">
+    <Flex alignItems="center" mt="200px" mb="200px">
       <Box w="75vw" margin="0 auto 0 auto">
         <Heading as="h1">Composer</Heading>
         <Divider marginBottom={20} />
-        <SimpleGrid columns={2} spacing={5}>
-          {mappedUis.map((ui) => (
+        <SimpleGrid columns={2} spacing={20}>
+          {getUis().map((ui) => (
             <InfoContainer key={ui.id} {...ui}>
               <EmbeddableUi uiDefinition={ui} />
             </InfoContainer>

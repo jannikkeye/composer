@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { makeCustomElement } from "./lib/makeCustomElement";
-import "./styles/plain.css";
+import { makeCustomElement } from "../../lib/makeCustomElement";
 
 const Plain = makeCustomElement({
   mount: (el) => {
@@ -22,4 +21,4 @@ const Plain = makeCustomElement({
   },
 });
 
-window.customElements.define("composer-plain", Plain);
+window.customElements.define("composer-plain-react", Plain);

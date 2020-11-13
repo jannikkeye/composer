@@ -1,0 +1,15 @@
+const { merge } = require("webpack-merge");
+const common = require("./webpack.common.js");
+
+module.exports = merge(common, {
+  mode: "development",
+  devtool: "source-map",
+  devServer: {
+    writeToDisk: true,
+    contentBase: "./dist",
+    watchOptions: {
+      aggregateTimeout: 200,
+      poll: 1000,
+    },
+  },
+});
