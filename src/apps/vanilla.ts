@@ -19,8 +19,6 @@ const Vanilla = makeCustomElement({
     const i = shadowRoot.getElementById("inc");
     const d = shadowRoot.getElementById("dec");
 
-    console.log(t, i, d);
-
     if (t && i && d) {
       i.addEventListener("click", () => {
         t.innerHTML = (parseInt(t.innerHTML) + 1).toString();
