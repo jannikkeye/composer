@@ -7,21 +7,9 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
   entry: {
     app: path.resolve(__dirname, "./src/index.tsx"),
-    "react.plain": path.resolve(__dirname, "./src/apps/react/react.plain.tsx"),
-    "react.shadow": path.resolve(
-      __dirname,
-      "./src/apps/react/react.shadow.tsx"
-    ),
-    "vanilla.plain": path.resolve(
-      __dirname,
-      "./src/apps/vanilla/vanilla.plain.ts"
-    ),
-    "vanilla.shadow": path.resolve(
-      __dirname,
-      "./src/apps/vanilla/vanilla.shadow.ts"
-    ),
-    "vue.plain": path.resolve(__dirname, "./src/apps/vue/vue.plain.ts"),
-    "vue.shadow": path.resolve(__dirname, "./src/apps/vue/vue.shadow.ts"),
+    react: path.resolve(__dirname, "./src/apps/react.tsx"),
+    vanilla: path.resolve(__dirname, "./src/apps/vanilla.ts"),
+    vue: path.resolve(__dirname, "./src/apps/vue.ts"),
   },
   module: {
     rules: [

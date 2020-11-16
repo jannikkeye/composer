@@ -1,34 +1,19 @@
 {
   "uis": [
     {
-      "id": "@composer/plain-react",
-      "tag": "composer-plain-react",
-      "js": "http://localhost:3000/react.plain.js"
+      "id": "@composer/react",
+      "tag": "composer-react",
+      "js": "http://localhost:3000/react.js"
     },
     {
-      "id": "@composer/shadow-react",
-      "tag": "composer-shadow-react",
-      "js": "http://localhost:3000/react.shadow.js"
+      "id": "@composer/vue",
+      "tag": "composer-vue",
+      "js": "http://localhost:3000/vue.js"
     },
     {
-      "id": "@composer/plain-vue",
-      "tag": "composer-plain-vue",
-      "js": "http://localhost:3000/vue.plain.js"
-    },
-    {
-      "id": "@composer/shadow-vue",
-      "tag": "composer-shadow-vue",
-      "js": "http://localhost:3000/vue.shadow.js"
-    },
-    {
-      "id": "@composer/plain-vanilla",
-      "tag": "composer-plain-vanilla",
-      "js": "http://localhost:3000/vanilla.plain.js"
-    },
-    {
-      "id": "@composer/shadow-vanilla",
-      "tag": "composer-shadow-vanilla",
-      "js": "http://localhost:3000/vanilla.shadow.js"
+      "id": "@composer/vanilla",
+      "tag": "composer-vanilla",
+      "js": "http://localhost:3000/vanilla.js"
     }
   ]
 }
