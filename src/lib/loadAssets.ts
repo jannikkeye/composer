@@ -27,7 +27,10 @@ const loadScript = async (src: string) => {
       if (jsLoaded.getAttribute("data-loaded") === "true") {
         resolve();
       } else {
-        jsLoaded.addEventListener("load", () => resolve());
+        jsLoaded.addEventListener("load", () => {
+          jsLoaded.setAttribute("data-loaded", "true");
+          resolve();
+        });
       }
     } else {
       const script = document.createElement("script");

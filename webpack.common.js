@@ -39,14 +39,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: "Composer",
-      excludeChunks: [
-        "react.shadow",
-        "react.plain",
-        "vanilla.shadow",
-        "vanilla.plain",
-        "vue.shadow",
-        "vue.plain",
-      ],
+      excludeChunks: ["react", "vanilla", "vue"],
     }),
     new webpack.DefinePlugin({
       __VUE_OPTIONS_API__: true,
