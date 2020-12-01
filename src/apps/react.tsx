@@ -17,12 +17,7 @@ const App = () => {
 
 const ReactApp = makeCustomElement({
   mount: (el) => {
-    ReactDOM.render(
-      <div>
-        <App />
-      </div>,
-      el
-    );
+    ReactDOM.render(<App />, el);
   },
   styles,
   unmount: (el) => {
